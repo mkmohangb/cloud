@@ -18,4 +18,8 @@ doctl apps create --spec <spec file path>
 doctl apps get <app id> -o json |grep phase
 doctl apps delete <app id> -f 
 ```
-
+##
+Droplet
+```Shell
+doctl compute droplet list --format ID --no-header | xargs doctl compute droplet delete -f -t <access token>
+```
